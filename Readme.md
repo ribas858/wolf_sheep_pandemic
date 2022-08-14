@@ -22,7 +22,10 @@ O modelo é testado e demonstra vários conceitos e recursos do Mesa:
 
 ## Alterações no Código
 
-Na ``wolf_sheep/model.py`` o estágio de criaçao inicial dos lobos foi alterado para receber um determinado número de lobos doentes. Durante o "``for i in range(self.initial_wolves):``"
+
+### ``wolf_sheep/model.py``
+No estágio de criaçao inicial dos lobos foi alterado para receber um determinado número de lobos doentes. Durante o "``for i in range(self.initial_wolves):``" é imposto uma condição para que parte desses lobos sejao doentes.
+No ``self.datacollector`` foi alterado o idioma das labels, para Portugues-Brasil. Também foi inserido duas novas labels, "Lobos Doentes", e "Lobos Imunes", além disso a label "Lobos"(Wolves) passou para "Lobos Comuns", que são os lobos não imunes.
 
 ## Installation
 
