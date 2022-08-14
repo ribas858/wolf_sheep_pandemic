@@ -1,18 +1,28 @@
 # Wolf-Sheep Predation Model
 
-## Summary
+### Código final na branch Main
+## Sumário
 
-A simple ecological model, consisting of three agent types: wolves, sheep, and grass. The wolves and the sheep wander around the grid at random. Wolves and sheep both expend energy moving around, and replenish it by eating. Sheep eat grass, and wolves eat sheep if they end up on the same grid cell.
+Com base em um modelo ecológico simples, composto por três tipos de agentes: lobos, ovelhas e capim. Os lobos e as ovelhas vagam aleatoriamente pela grade. Lobos e ovelhas gastam energia se movendo e a repõem comendo. As ovelhas comem grama e os lobos comem ovelhas caso as encontrem na mesma célula da grade. Se lobos e ovelhas tiverem energia suficiente, eles se reproduzem, criando um novo lobo ou ovelha (neste modelo simplificado, apenas um dos pais é necessário para a reprodução). A grama em cada célula cresce a uma taxa constante. Se algum lobo e ovelha ficar sem energia, eles morrem.
 
-If wolves and sheep have enough energy, they reproduce, creating a new wolf or sheep (in this simplified model, only one parent is needed for reproduction). The grass on each cell regrows at a constant rate. If any wolves and sheep run out of energy, they die.
+Diante disso foi implantado uma doença contagiosa em um determinado número de Lobos (definido pelo usuário na interface). Enquanto os lobos vagam pela grade em busca de ovelhas, eles podem se deparar com algum lobo infectado, contraindo a doença caso não seja imune.
 
-The model is tests and demonstrates several Mesa concepts and features:
+A partir do momento que um lobo está infectado ele não consegue mais se alimentar e nem se reproduzir, e eventualmente morrerá. Mas antes disso todos os lobos saudáveis que esse predador entrar em contato, ficarão doentes. Além disso, a infecção ocorre não apenas se o outro lobo estiver na mesma célula, mas também se ele estiver na área de uma célula de alcance, ou seja, em qualquer célula ao redor de onde se encontra o predador infectado.  Entretanto existe uma
+exceção, a probabilidade de existir predadores imunes, os mesmos não irão contrair a doença mesmo se entrarem em contato com um lobo doente.
+
+Os lobos imunes no momento de sua reprodução, tem chance de passar ou não o gene da imunidade para seus filhos, assim, se o lobo filho não herdar o gene, a probabilidade da população de lobos se extinguir completamente, será maior. As ovelhas, em contrapartida, não são afetadas pela doença e se comportam normalmente.
+
+O modelo é testado e demonstra vários conceitos e recursos do Mesa:
  - MultiGrid
- - Multiple agent types (wolves, sheep, grass)
- - Overlay arbitrary text (wolf's energy) on agent's shapes while drawing on CanvasGrid
- - Agents inheriting a behavior (random movement) from an abstract parent
- - Writing a model composed of multiple files.
- - Dynamically adding and removing agents from the schedule
+ - Vários tipos de agentes (lobos, ovelhas, grama)
+ - Sobreponha texto arbitrário (energia do lobo) nas formas do agente enquanto desenha no CanvasGrid
+ - Agentes que herdam um comportamento (movimento aleatório) de um pai abstrato
+ - Escrevendo um modelo composto por vários arquivos.
+ - Adicionando e removendo dinamicamente agentes da agenda
+
+## Alterações no Código
+
+
 
 ## Installation
 
