@@ -12,6 +12,13 @@ exceção, a probabilidade de existir predadores imunes, os mesmos não irão co
 
 Os lobos imunes no momento de sua reprodução, tem chance de passar ou não o gene da imunidade para seus filhos, assim, se o lobo filho não herdar o gene, a probabilidade da população de lobos se extinguir completamente, será maior. As ovelhas, em contrapartida, não são afetadas pela doença e se comportam normalmente.
 
+#### Alterações no Código
+#### Hipótese Causal
+#### Instalação
+#### Como Executar
+#### Arquivos
+#### Leitura adicional
+
 O modelo é testado e demonstra vários conceitos e recursos do Mesa:
  - MultiGrid
  - Vários tipos de agentes (lobos, ovelhas, grama)
@@ -52,8 +59,15 @@ No início do ``def step():`` é feita uma checagem se o predador está doente, 
 
 No momento do lobo se alimentar, é feita uma checagem ``if not self.doente:`` para que apenas lobos saudáveis possam comer. Além disso é feito o mesmo processo no momento da reprodução, lobos doentes não se reproduzem.
 
-Caso o lobo seja imune, é seguido uma probabilidade do gene da imunidade para a reprodução desse lobo. Se for atendido o filho desse lobo também será imune.
+Caso o lobo seja imune, é seguido uma probabilidade do gene da imunidade para a reprodução desse lobo. Se for atendido, o filho desse lobo também será imune.
 
+## Hipótese Causal
+
+No momento em que o predador for contaminado, ele se manterá em um estado contagioso, ou seja, irá transmitir a doença para qualquer outro predador vulnerável. Caso um possível gene imune não predomine sobre a população, a espécie de predadores eventualmente será extinta.
+
+Diante disso a população da Presa irá crescer consideravelmente, pois seu predador não existe mais no ecossistema, contudo levando a uma falta de recursos, no caso, a grama. Quando a presa não puder mais se alimentar, a mesma será extinta.
+	
+Concluindo, uma doença infecciosa implantada sobre o predador leva à extinção dos três agentes do ecossistema em questão.
 
 ## Installation
 
