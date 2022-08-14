@@ -1,8 +1,5 @@
 # Wolf-Sheep - Pandemic
 
-#### Código final na branch ``main``
-## Sumário
-
 Com base em um modelo ecológico simples, composto por três tipos de agentes: lobos, ovelhas e capim. Os lobos e as ovelhas vagam aleatoriamente pela grade. Lobos e ovelhas gastam energia se movendo e a repõem comendo. As ovelhas comem grama e os lobos comem ovelhas caso as encontrem na mesma célula da grade. Se lobos e ovelhas tiverem energia suficiente, eles se reproduzem, criando um novo lobo ou ovelha (neste modelo simplificado, apenas um dos pais é necessário para a reprodução). A grama em cada célula cresce a uma taxa constante. Se algum lobo e ovelha ficar sem energia, eles morrem.
 
 Diante disso foi implantado uma doença contagiosa em um determinado número de Lobos (definido pelo usuário na interface). Enquanto os lobos vagam pela grade em busca de ovelhas, eles podem se deparar com algum lobo infectado, contraindo a doença caso não seja imune.
@@ -12,12 +9,15 @@ exceção, a probabilidade de existir predadores imunes, os mesmos não irão co
 
 Os lobos imunes no momento de sua reprodução, tem chance de passar ou não o gene da imunidade para seus filhos, assim, se o lobo filho não herdar o gene, a probabilidade da população de lobos se extinguir completamente, será maior. As ovelhas, em contrapartida, não são afetadas pela doença e se comportam normalmente.
 
-#### Alterações no Código
-#### Hipótese Causal
-#### Instalação
-#### Como Executar
-#### Arquivos
-#### Leitura adicional
+#### Código final na branch ``main``
+
+## Sumário
+- **Alterações no Código**
+- **Hipótese Causal**
+- **Instalação**
+- **Como Executar**
+- **Arquivos**
+- **Leitura adicional**
 
 O modelo é testado e demonstra vários conceitos e recursos do Mesa:
  - MultiGrid
