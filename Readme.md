@@ -70,26 +70,26 @@ Concluindo, uma doença infecciosa implantada sobre o predador leva à extinçã
 
 ## Instalação
 
-To install the dependencies use pip and the requirements.txt in this directory. e.g.
+Para instalar as dependências, use o pip e o requirements.txt neste diretório. Por exemplo:
 
 ```
-    # First, we clone the Mesa repo
+    # Primeiro, clonamos o repositório Mesa.
     $ git clone https://github.com/projectmesa/mesa.git
     $ cd mesa
-    # Then we cd to the example directory
+    # Então dê um `cd` para o diretório de exemplo.
     $ cd examples/wolf_sheep
     $ pip install -r requirements.txt
 ```
 
 ## Como Executar
 
-To run the model interactively, run ``mesa runserver`` in this directory. e.g.
+Para executar o modelo interativamente, execute ``mesa runserver`` neste diretório. por exemplo.
 
 ```
     $ mesa runserver
 ```
 
-Then open your browser to [http://127.0.0.1:8521/](http://127.0.0.1:8521/) and press Reset, then Run.
+Em seguida, abra seu navegador para [http://127.0.0.1:8521/](http://127.0.0.1:8521/) e pressione Redefinir e, em seguida, Executar.
 
 ## Arquivos
 
@@ -103,9 +103,9 @@ Then open your browser to [http://127.0.0.1:8521/](http://127.0.0.1:8521/) and p
 
 ## Leitura Adicional
 
-This model is closely based on the NetLogo Wolf-Sheep Predation Model:
+Este modelo é baseado no modelo Wolf-Sheep Predation da NetLogo:
 
 Wilensky, U. (1997). NetLogo Wolf Sheep Predation model. http://ccl.northwestern.edu/netlogo/models/WolfSheepPredation. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
 
-See also the [Lotka–Volterra equations
-](https://en.wikipedia.org/wiki/Lotka%E2%80%93Volterra_equations) for an example of a classic differential-equation model with similar dynamics.
+Veja também [Lotka–Volterra equations
+](https://en.wikipedia.org/wiki/Lotka%E2%80%93Volterra_equations) para obter um exemplo de um modelo clássico de equação diferencial com dinâmica semelhante.
