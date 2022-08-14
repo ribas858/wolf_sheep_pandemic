@@ -25,6 +25,7 @@ O modelo é testado, e demonstra vários conceitos e recursos do Mesa:
 - **Instalação**
 - **Como Executar**
 - **Arquivos**
+- **Observações**
 - **Leitura Adicional**
 
 ## Alterações no Código
@@ -107,6 +108,10 @@ Em seguida, abra seu navegador para [http://127.0.0.1:8521/](http://127.0.0.1:85
 * ``wolf_sheep/model.py``: Define o próprio modelo Wolf-Sheep.
 * ``wolf_sheep/server.py``: Configura o servidor de visualização interativa.
 * ``run.py``: Inicia um servidor de visualização de modelo.
+
+## Observações
+
+Após cada alteração nos parâmetros do Simulador, é nescessário clicar em Reset para o início da próxima simulação.
 
 ## Leitura Adicional
 
