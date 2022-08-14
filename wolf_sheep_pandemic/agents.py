@@ -5,9 +5,9 @@ from wolf_sheep_pandemic.random_walk import RandomWalker
 
 class Sheep(RandomWalker):
     """
-    A sheep that walks around, reproduces (asexually) and gets eaten.
+    Uma ovelha que anda, se reproduz (assexuadamente) e é comida.
 
-    The init is the same as the RandomWalker.
+    O init é o mesmo do RandomWalker.
     """
 
     energy = None
@@ -18,7 +18,7 @@ class Sheep(RandomWalker):
 
     def step(self):
         """
-        A model step. Move, then eat grass and reproduce.
+        Um passo de modelo. Mova-se, depois coma grama e se reproduza.
         """
         self.random_move()
         living = True
@@ -53,7 +53,7 @@ class Sheep(RandomWalker):
 
 class Wolf(RandomWalker):
     """
-    A wolf that walks around, reproduces (asexually) and eats sheep.
+    Um lobo que anda, se reproduz (assexuadamente) e come ovelhas. Caso doente, infecta outros lobos.
     """
 
     energy = None
@@ -66,12 +66,6 @@ class Wolf(RandomWalker):
         self.doente = doente
         self.imune = imune
 
-        # print("doente")
-        # print(self.doente)
-        # print ("======")
-
-    
-
     def step(self):
         self.random_move()
 
@@ -79,18 +73,15 @@ class Wolf(RandomWalker):
                 this_cell = self.model.grid.get_cell_list_contents([self.pos])
                 pos_x = self.pos[0]
                 pos_y = self.pos[1]
-                
-                # print ("============== É: ", self.type_quina(self.pos))
 
                 this_cell += self.area_lobos(self.pos, this_cell)
 
-                # self.print_thiscell(this_cell) # Printa a lista de lobos na area de alcance do lobo doente
+                # self.print_thiscell(this_cell) # Exibe a lista de lobos na area de alcance do lobo infectado.
 
                 wolfs = [obj for obj in this_cell if isinstance(obj, Wolf) and not obj.doente ]
-                #print ("== qtd lobos na area ", len(wolfs))
+                
                 if len(wolfs) > 0:
                     wolf_contamina = self.random.choice(wolfs)
-                    #print ("============== pos2 ", wolf_contamina.pos)
                     if not wolf_contamina.doente:
                         wolf_contamina.contamina()
             
@@ -110,13 +101,9 @@ class Wolf(RandomWalker):
 
         # Morte ou Reprodução
         if self.energy < 0:
-            # if self.imune:
-                # print ("E morreu")
-                # print(self.unique_id)
-                # print("========")
-
             self.model.grid.remove_agent(self)
             self.model.schedule.remove(self)
+        
         else:
             if self.random.random() < self.model.wolf_reproduce and not self.doente:
                 # Create a new wolf cub
@@ -127,34 +114,15 @@ class Wolf(RandomWalker):
                 )
 
                 if self.imune:
-                    rand = self.random.random()
-                    # print ("reprod =========== ", end="")
-                    # print(rand, end="")
-                    # print(" ======== ", end="")
-                    # print(self.model.predator_imune_gene, end="")
-                    # print ("===========")
-
-                    if rand < self.model.predator_imune_gene:
-                        # print ("Lobo Imune Reproduziu..")
-                        # print(self.unique_id)
-                        # print("======== ", self.imune)
-                        
+                    if self.random.random() < self.model.predator_imune_gene:
                         cub.imune = True
-                    # else:
-                        # print ("Lobo Imune Reproduziu, mas não passou gene..")
-                        # print(self.unique_id)
-                        # print("======== " , self.imune)
                 
                 self.model.grid.place_agent(cub, cub.pos)
                 self.model.schedule.add(cub)
-            else:
-                if self.doente:
-                    print ("Lobo Doente")
     
     def contamina(self):
         if not self.imune:
             self.doente = True
-            # print("Contaminou...")
 
 
     def area_lobos(self, pos, this_cell):
@@ -260,16 +228,16 @@ class Wolf(RandomWalker):
 
 class GrassPatch(mesa.Agent):
     """
-    A patch of grass that grows at a fixed rate and it is eaten by sheep
+    Um pedaço de grama que cresce a uma taxa fixa e é comido por ovelhas.
     """
 
     def __init__(self, unique_id, pos, model, fully_grown, countdown):
         """
-        Creates a new patch of grass
+        Cria um novo pedaço de grama
 
-        Args:
-            grown: (boolean) Whether the patch of grass is fully grown or not
-            countdown: Time for the patch of grass to be fully grown again
+        Args:   
+            grown: (boolean) Se o pedaço de grama está totalmente crescido ou não.
+            countdown: Tempo para o pedaço de grama crescer totalmente, novamente.
         """
         super().__init__(unique_id, model)
         self.fully_grown = fully_grown

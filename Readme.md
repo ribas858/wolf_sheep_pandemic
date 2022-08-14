@@ -1,3 +1,11 @@
+<!--
+Wolf-Sheep - Pandemic 
+================================
+Lucas Jr. Ribas - UnB
+
+Baseado no "Wolf Sheep Predation Model"
+-->
+
 # Wolf-Sheep - Pandemic
 
 ##### *Código final na branch* ***``main``***

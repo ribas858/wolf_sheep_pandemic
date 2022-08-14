@@ -1,8 +1,11 @@
 """
-Wolf-Sheep Predation Model
+Wolf-Sheep - Pandemic 
 ================================
+Lucas Jr. Ribas - UnB
 
-Replication of the model found in NetLogo:
+Baseado no "Wolf Sheep Predation Model"
+
+Replicação do modelo original "Wolf Sheep Predation" encontrado no NetLogo:
     Wilensky, U. (1997). NetLogo Wolf Sheep Predation model.
     http://ccl.northwestern.edu/netlogo/models/WolfSheepPredation.
     Center for Connected Learning and Computer-Based Modeling,
@@ -17,7 +20,7 @@ from wolf_sheep_pandemic.agents import Sheep, Wolf, GrassPatch
 
 class WolfSheep(mesa.Model):
     """
-    Wolf-Sheep Predation Model
+    Wolf-Sheep - Pandemic
     """
 
     height = 20
@@ -42,7 +45,7 @@ class WolfSheep(mesa.Model):
     verbose = False  # Print-monitoring
 
     description = (
-        "A model for simulating wolf and sheep (predator-prey) ecosystem modelling."
+        "Um modelo para simular a modelagem de ecossistemas de lobos e ovelhas, frente a uma doença infecciosa."
     )
 
     def __init__(
@@ -62,18 +65,18 @@ class WolfSheep(mesa.Model):
         predator_imune_gene = 0.1
     ):
         """
-        Create a new Wolf-Sheep model with the given parameters.
+        Descrição dos parâmetros.
 
         Args:
-            initial_sheep: Number of sheep to start with
-            initial_wolves: Number of wolves to start with
-            sheep_reproduce: Probability of each sheep reproducing each step
-            wolf_reproduce: Probability of each wolf reproducing each step
-            wolf_gain_from_food: Energy a wolf gains from eating a sheep
-            grass: Whether to have the sheep eat grass for energy
-            grass_regrowth_time: How long it takes for a grass patch to regrow
-                                 once it is eaten
-            sheep_gain_from_food: Energy sheep gain from grass, if enabled.
+            initial_sheep: Número de ovelhas para começar
+            initial_wolves: Número de lobos para começar
+            sheep_reproduce: Probabilidade de cada ovelha se reproduzir a cada passo
+            wolf_reproduce: Probabilidade de cada lobo se reproduzir a cada passo
+            wolf_gain_from_food: Energia que um lobo ganha ao comer uma ovelha
+            grass: Se as ovelhas comem grama para obter energia. Ativa a grama.
+            grass_regrowth_time: quanto tempo leva para um pedaço de grama crescer novamente
+                        uma vez que é comido.
+            sheep_gain_from_food: Ganho de energia pela ovelha da grama, se ativado.
 
             predator_init_doente: Número de predadores doentes ao início da simulação
             predator_imune: Chance do Predador ser Imune
@@ -128,24 +131,15 @@ class WolfSheep(mesa.Model):
 
         # Create wolves
         for i in range(self.initial_wolves):
-            # print("i:")
-            # print(i)
-            
             x = self.random.randrange(self.width)
             y = self.random.randrange(self.height)
+
             energy = self.random.randrange(2 * self.wolf_gain_from_food)
 
             if i < self.predator_init_doente:
                 wolf = Wolf(self.next_id(), (x, y), self, True, energy, True, False)
             else:
-                rand = self.random.random()
-                # print ("create =========== ", end="")
-                # print(rand, end="")
-                # print(" ======== ", end="")
-                # print(self.predator_imune, end="")
-                # print ("===========")
-                if rand < self.predator_imune:
-                    # print ("=========== imune")
+                if self.random.random() < self.predator_imune:
                     wolf = Wolf(self.next_id(), (x, y), self, True, energy, False, True)
                 else:
                     wolf = Wolf(self.next_id(), (x, y), self, True, energy, False, False)

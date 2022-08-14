@@ -79,15 +79,15 @@ model_params = {
         0.01,
         1.0,
         0.01,
-        description="The rate at which wolf agents reproduce.",
+        description="A taxa na qual os agentes lobos se reproduzem.",
     ),
     "wolf_gain_from_food": mesa.visualization.Slider(
         "Energia Obtida pelos Lobos ao Devorar Ovelhas", 20, 1, 50
     ),
     "sheep_gain_from_food": mesa.visualization.Slider("Energia Obtida da Grama pelas Ovelhas", 4, 1, 10),
-    "predator_imune": mesa.visualization.Slider("Chance do Predador ser Imune", 0.05, 0.01, 1.0, 0.01),
-    "predator_imune_gene": mesa.visualization.Slider("Chance do Gene da Imunidade aos Filhos do Predador", 0.05, 0.01, 1.0, 0.01),
-    "predator_init_doente": mesa.visualization.Slider("Número Inicial de Predadores Doentes", 1, 1, 100)
+    "predator_imune": mesa.visualization.Slider("Probabilidade do Lobo ser Imune", 0.05, 0.01, 1.0, 0.01),
+    "predator_imune_gene": mesa.visualization.Slider("Probabilidade de Imunidade aos Filhos do Lobo", 0.05, 0.01, 1.0, 0.01),
+    "predator_init_doente": mesa.visualization.Slider("Número Inicial de Lobos Doentes", 1, 1, 100)
 }
 
 server = mesa.visualization.ModularServer(
