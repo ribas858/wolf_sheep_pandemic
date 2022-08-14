@@ -69,6 +69,27 @@ No momento do lobo se alimentar, é feita uma checagem ``if not self.doente:`` p
 
 Caso o lobo seja imune, é seguido uma probabilidade do gene da imunidade para a reprodução desse lobo. Se for atendido, o filho desse lobo também será imune.
 
+### ``wolf_sheep/server.py``
+
+#### **Novas imagens:**
+
+- Lobo Vermelho: Lobo Doente
+- Lobo Cinza: Lobo Saudável
+- Lobo Azul: Lobo Imune
+
+#### **Alterações:**
+
+Adicionado a interface, o controle das 3 novas variáveis:
+- predator_init_doente
+- predator_imune
+- predator_imune_gene
+
+Adicionado uma nova varável ao gráfico existente:
+- Lobos Doentes
+
+Adicionado um novo gráfico, com a variável:
+- Lobos Imunes
+
 ## Hipótese Causal
 
 No momento em que o predador for contaminado, ele se manterá em um estado contagioso, ou seja, irá transmitir a doença para qualquer outro predador vulnerável. Caso um possível gene imune não predomine sobre a população, a espécie de predadores eventualmente será extinta.
