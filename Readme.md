@@ -36,6 +36,14 @@ No estágio de criação inicial dos lobos, o código foi alterado para receber 
 
 No ``self.datacollector`` foi alterado o idioma das labels, para Português-Brasil. E também foi inserido duas novas labels, "Lobos Doentes", e "Lobos Imunes", aliás a label "Lobos" (Wolves) passou para "Lobos Comuns", que são os lobos não imunes.
 
+### ``wolf_sheep/agents.py``
+
+#### **Novos métodos:**
+**``def contamina():``** Contamina um lobo, se ele não for imune.
+
+**``def area_lobos():``** Define a área de alcance de um lobo infectado. Alcance de 1 célula, em 360 graus.
+
+
 ## Installation
 
 To install the dependencies use pip and the requirements.txt in this directory. e.g.
