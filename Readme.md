@@ -9,7 +9,7 @@ exceção, a probabilidade de existir predadores imunes, os mesmos não irão co
 
 Os lobos imunes no momento de sua reprodução, tem chance de passar ou não o gene da imunidade para seus filhos, assim, se o lobo filho não herdar o gene, a probabilidade da população de lobos se extinguir completamente, será maior. As ovelhas, em contrapartida, não são afetadas pela doença e se comportam normalmente.
 
-**Código final na branch** ``main``
+Código final na branch **``main``**
 
 ## Sumário
 - **Alterações no Código**
