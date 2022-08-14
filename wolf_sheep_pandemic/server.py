@@ -11,20 +11,19 @@ def wolf_sheep_portrayal(agent):
     portrayal = {}
 
     if type(agent) is Sheep:
-        portrayal["Shape"] = "wolf_sheep/resources/sheep.png"
-        # https://icons8.com/web-app/433/sheep
+        portrayal["Shape"] = "wolf_sheep_pandemic/resources/new_sheep.png"
         portrayal["scale"] = 0.9
         portrayal["Layer"] = 1
 
     elif type(agent) is Wolf:
         if agent.doente:
-            portrayal["Shape"] = "wolf_sheep/resources/wolf_doente.png"
+            portrayal["Shape"] = "wolf_sheep_pandemic/resources/wolf_doente.png"
         else:
             if agent.imune:
-                portrayal["Shape"] = "wolf_sheep/resources/wolf_imune.png"
+                portrayal["Shape"] = "wolf_sheep_pandemic/resources/wolf_imune.png"
             else:
-                portrayal["Shape"] = "wolf_sheep/resources/wolf.png"
-        # https://icons8.com/web-app/36821/German-Shepherd
+                portrayal["Shape"] = "wolf_sheep_pandemic/resources/wolf.png"
+        
         portrayal["scale"] = 0.9
         portrayal["Layer"] = 2
         portrayal["text"] = round(agent.energy, 1)
@@ -44,19 +43,19 @@ def wolf_sheep_portrayal(agent):
     return portrayal
 
 
-canvas_element = mesa.visualization.CanvasGrid(wolf_sheep_portrayal, 20, 20, 500, 500)
+canvas_element = mesa.visualization.CanvasGrid(wolf_sheep_portrayal, 20, 20, 600, 600)
 chart_element = mesa.visualization.ChartModule(
     [
         {"Label": "Lobos Comuns", "Color": "black"},
         {"Label": "Ovelhas", "Color": "yellow"},
         {"Label": "Grama", "Color": "#00AA00"},
-        {"Label": "Lobos Doentes", "Color": "#AA0000"}
+        {"Label": "Lobos Doentes", "Color": "#e90000"}
     ]
 )
 
 imunes = mesa.visualization.ChartModule(
     [
-        {"Label": "Lobos Imunes", "Color": "#1e12f3"},
+        {"Label": "Lobos Imunes", "Color": "#0b00be"},
     ]
 )
 

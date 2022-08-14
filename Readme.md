@@ -73,9 +73,10 @@ Caso o lobo seja imune, é seguido uma probabilidade do gene da imunidade para a
 
 #### **Novas imagens:**
 
-- Lobo Vermelho: Lobo Doente
-- Lobo Cinza: Lobo Saudável
-- Lobo Azul: Lobo Imune
+- Nova ovelha.
+- Lobo Vermelho: Lobo Doente.
+- Lobo Cinza: Lobo Saudável.
+- Lobo Azul: Lobo Imune.
 
 #### **Alterações:**
 
