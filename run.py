@@ -1,3 +1,3 @@
-from wolf_sheep.server import server
+from wolf_sheep_pandemic.server import server
 
 server.launch()

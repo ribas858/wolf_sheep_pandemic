@@ -83,7 +83,13 @@ Para instalar as dependências, use o pip e o requirements.txt neste diretório.
 
 ## Como Executar
 
-Para executar o modelo interativamente, execute ``mesa runserver`` neste diretório. por exemplo.
+Para executar o modelo interativamente, execute ``python3 run.py`` ou ``mesa runserver``  neste diretório. 
+
+Por exemplo:
+
+```
+    $ python3 run.py
+```
 
 ```
     $ mesa runserver

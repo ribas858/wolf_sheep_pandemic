@@ -1,6 +1,6 @@
 import this
 import mesa
-from wolf_sheep.random_walk import RandomWalker
+from wolf_sheep_pandemic.random_walk import RandomWalker
 
 
 class Sheep(RandomWalker):

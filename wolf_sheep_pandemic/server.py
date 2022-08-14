@@ -1,7 +1,7 @@
 import mesa
 
-from wolf_sheep.agents import Wolf, Sheep, GrassPatch
-from wolf_sheep.model import WolfSheep
+from wolf_sheep_pandemic.agents import Wolf, Sheep, GrassPatch
+from wolf_sheep_pandemic.model import WolfSheep
 
 
 def wolf_sheep_portrayal(agent):
