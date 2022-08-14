@@ -1,3 +1,11 @@
+<!--
+Wolf-Sheep - Pandemic 
+================================
+Lucas Jr. Ribas - UnB
+
+Baseado no "Wolf Sheep Predation Model"
+-->
+
 # Wolf-Sheep - Pandemic
 
 ##### *Código final na branch* ***``main``***
@@ -60,6 +68,28 @@ No início do ``def step():`` é feita uma checagem se o predador está doente, 
 No momento do lobo se alimentar, é feita uma checagem ``if not self.doente:`` para que apenas lobos saudáveis possam comer. Além disso é feito o mesmo processo no momento da reprodução, lobos doentes não se reproduzem.
 
 Caso o lobo seja imune, é seguido uma probabilidade do gene da imunidade para a reprodução desse lobo. Se for atendido, o filho desse lobo também será imune.
+
+### ``wolf_sheep/server.py``
+
+#### **Novas imagens:**
+
+- Nova ovelha.
+- Lobo Vermelho: Lobo Doente.
+- Lobo Cinza: Lobo Saudável.
+- Lobo Azul: Lobo Imune.
+
+#### **Alterações:**
+
+Adicionado a interface, o controle das 3 novas variáveis:
+- predator_init_doente
+- predator_imune
+- predator_imune_gene
+
+Adicionado uma nova varável ao gráfico existente:
+- Lobos Doentes
+
+Adicionado um novo gráfico, com a variável:
+- Lobos Imunes
 
 ## Hipótese Causal
 
