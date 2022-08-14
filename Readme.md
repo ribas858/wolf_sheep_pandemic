@@ -11,7 +11,7 @@ exceção, a probabilidade de existir predadores imunes, os mesmos não irão co
 
 Os lobos imunes no momento de sua reprodução, tem chance de passar ou não o gene da imunidade para seus filhos, assim, se o lobo filho não herdar o gene, a probabilidade da população de lobos se extinguir completamente, será maior. As ovelhas, em contrapartida, não são afetadas pela doença e se comportam normalmente.
 
-O modelo é testado e demonstra vários conceitos e recursos do Mesa:
+O modelo é testado, e demonstra vários conceitos e recursos do Mesa:
  - MultiGrid
  - Vários tipos de agentes (lobos, ovelhas, grama)
  - Sobreponha texto arbitrário (energia do lobo) nas formas do agente enquanto desenha no CanvasGrid
@@ -25,7 +25,7 @@ O modelo é testado e demonstra vários conceitos e recursos do Mesa:
 - **Instalação**
 - **Como Executar**
 - **Arquivos**
-- **Leitura adicional**
+- **Leitura Adicional**
 
 ## Alterações no Código
 
@@ -68,7 +68,7 @@ Diante disso a população da Presa irá crescer consideravelmente, pois seu pre
 	
 Concluindo, uma doença infecciosa implantada sobre o predador leva à extinção dos três agentes do ecossistema em questão.
 
-## Installation
+## Instalação
 
 To install the dependencies use pip and the requirements.txt in this directory. e.g.
 
@@ -81,7 +81,7 @@ To install the dependencies use pip and the requirements.txt in this directory. 
     $ pip install -r requirements.txt
 ```
 
-## How to Run
+## Como Executar
 
 To run the model interactively, run ``mesa runserver`` in this directory. e.g.
 
@@ -91,17 +91,17 @@ To run the model interactively, run ``mesa runserver`` in this directory. e.g.
 
 Then open your browser to [http://127.0.0.1:8521/](http://127.0.0.1:8521/) and press Reset, then Run.
 
-## Files
+## Arquivos
 
-* ``wolf_sheep/random_walk.py``: This defines the ``RandomWalker`` agent, which implements the behavior of moving randomly across a grid, one cell at a time. Both the Wolf and Sheep agents will inherit from it.
-* ``wolf_sheep/test_random_walk.py``: Defines a simple model and a text-only visualization intended to make sure the RandomWalk class was working as expected. This doesn't actually model anything, but serves as an ad-hoc unit test. To run it, ``cd`` into the ``wolf_sheep`` directory and run ``python test_random_walk.py``. You'll see a series of ASCII grids, one per model step, with each cell showing a count of the number of agents in it.
-* ``wolf_sheep/agents.py``: Defines the Wolf, Sheep, and GrassPatch agent classes.
-* ``wolf_sheep/scheduler.py``: Defines a custom variant on the RandomActivationByType scheduler, where we can define filters for the `get_type_count` function.
-* ``wolf_sheep/model.py``: Defines the Wolf-Sheep Predation model itself
-* ``wolf_sheep/server.py``: Sets up the interactive visualization server
-* ``run.py``: Launches a model visualization server.
+* ``wolf_sheep/random_walk.py``: Define o ``RandomWalker`` agente, que implementa o comportamento de se mover aleatoriamente em uma grade, uma célula por vez.Ambos os agentes Wolf e Sheep herdarão dele.
+* ``wolf_sheep/test_random_walk.py``: Define um modelo simples e uma visualização somente de texto destinada a garantir que a classe RandomWalk esteja funcionando conforme o esperado. Na verdade, isso não modela nada, mas serve como um teste de unidade ad-hoc. Para executá-lo, entre no diretório ``wolf_sheep`` e execute ``python test_random_walk.py``. Você verá uma série de grades ASCII, uma por etapa do modelo, com cada célula mostrando uma contagem do número de agentes nela.
+* ``wolf_sheep/agents.py``: Define as classes de agente Wolf, Sheep e GrassPatch.
+* ``wolf_sheep/scheduler.py``: Define uma variante personalizada no agendador RandomActivationByType, onde podemos definir filtros para a função `get_type_count`.
+* ``wolf_sheep/model.py``: Define o próprio modelo Wolf-Sheep.
+* ``wolf_sheep/server.py``: Configura o servidor de visualização interativa.
+* ``run.py``: Inicia um servidor de visualização de modelo.
 
-## Further Reading
+## Leitura Adicional
 
 This model is closely based on the NetLogo Wolf-Sheep Predation Model:
 
