@@ -1,6 +1,6 @@
-# Wolf-Sheep Predation Model
+# Wolf-Sheep - Pandemic
 
-### Código final na branch Main
+#### Código final na branch Main
 ## Sumário
 
 Com base em um modelo ecológico simples, composto por três tipos de agentes: lobos, ovelhas e capim. Os lobos e as ovelhas vagam aleatoriamente pela grade. Lobos e ovelhas gastam energia se movendo e a repõem comendo. As ovelhas comem grama e os lobos comem ovelhas caso as encontrem na mesma célula da grade. Se lobos e ovelhas tiverem energia suficiente, eles se reproduzem, criando um novo lobo ou ovelha (neste modelo simplificado, apenas um dos pais é necessário para a reprodução). A grama em cada célula cresce a uma taxa constante. Se algum lobo e ovelha ficar sem energia, eles morrem.
