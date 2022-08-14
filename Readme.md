@@ -25,7 +25,7 @@ O modelo é testado e demonstra vários conceitos e recursos do Mesa:
 
 #### ``wolf_sheep/model.py``
 
-##### Novas variáveis:
+#### **Novas variáveis:**
 **predator_init_doente:** Número de predadores doentes ao início da simulação.
 
 **predator_imune:** Chance do Predador ser Imune.
