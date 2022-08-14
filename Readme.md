@@ -32,6 +32,8 @@ O modelo é testado e demonstra vários conceitos e recursos do Mesa:
 
 **predator_imune_gene:** Chance do Predador passar o gene da imunidade aos filhos.
 
+#### **Alterações:**
+
 No estágio de criação inicial dos lobos, o código foi alterado para receber um determinado número de lobos doentes. Durante o "``for i in range(self.initial_wolves):``" é imposto uma condição para que parte desses lobos sejam doentes. Além disso, de acordo com a probabilidade de surgir um lobo imune, parte desses predadores serão imunes.
 
 No ``self.datacollector`` foi alterado o idioma das labels, para Português-Brasil. E também foi inserido duas novas labels, "Lobos Doentes", e "Lobos Imunes", aliás a label "Lobos" (Wolves) passou para "Lobos Comuns", que são os lobos não imunes.
@@ -42,6 +44,15 @@ No ``self.datacollector`` foi alterado o idioma das labels, para Português-Bras
 **``def contamina():``** Contamina um lobo, se ele não for imune.
 
 **``def area_lobos():``** Define a área de alcance de um lobo infectado. Alcance de 1 célula, em 360 graus.
+
+**``def print_thiscell():``** Exibe no terminal os agentes (Lobo, Ovelha, Grama) ao alcance do lobo infectado. Lobos comuns são o alvo.
+
+#### **Alterações:**
+No início do ``def step():`` é feita uma checagem se o predador está doente, se sim ele executa o método ``def area_lobos():`` para ver se existe algum lobo em sua célula na grade, ou ao redor. Se existir 1 ou mais lobos ao alcance, então é escolhido aleatoriamente um lobo, e depois chamado o método ``def contamina():``, que irá contaminar o lobo se ele não for imune.
+
+No momento do lobo se alimentar, é feita uma checagem ``if not self.doente:`` para que apenas lobos saudáveis possam comer. Além disso é feito o mesmo processo no momento da reprodução, lobos doentes não se reproduzem.
+
+Caso o lobo seja imune, é seguido uma probabilidade do gene da imunidade para a reprodução desse lobo. Se for atendido o filho desse lobo também será imune.
 
 
 ## Installation
