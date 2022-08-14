@@ -23,7 +23,7 @@ O modelo é testado e demonstra vários conceitos e recursos do Mesa:
 ## Alterações no Código
 
 
-#### ``wolf_sheep/model.py``
+### ``wolf_sheep/model.py``
 
 #### **Novas variáveis:**
 **predator_init_doente:** Número de predadores doentes ao início da simulação.
