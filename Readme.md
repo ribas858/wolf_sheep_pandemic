@@ -26,9 +26,11 @@ O modelo é testado e demonstra vários conceitos e recursos do Mesa:
 #### ``wolf_sheep/model.py``
 
 ##### Novas variáveis:
-predator_init_doente: Número de predadores doentes ao início da simulação.
-predator_imune: Chance do Predador ser Imune.
-predator_imune_gene: Chance do Predador passar o gene da imunidade aos filhos.
+**predator_init_doente:** Número de predadores doentes ao início da simulação.
+
+**predator_imune:** Chance do Predador ser Imune.
+
+**predator_imune_gene:** Chance do Predador passar o gene da imunidade aos filhos.
 
 No estágio de criação inicial dos lobos, o código foi alterado para receber um determinado número de lobos doentes. Durante o "``for i in range(self.initial_wolves):``" é imposto uma condição para que parte desses lobos sejam doentes. Além disso, de acordo com a probabilidade de surgir um lobo imune, parte desses predadores serão imunes.
 
