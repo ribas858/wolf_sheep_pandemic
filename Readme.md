@@ -75,9 +75,10 @@ Para instalar as dependências, use o pip e o requirements.txt neste diretório.
 ```
     # Primeiro, clonamos o repositório Mesa.
     $ git clone https://github.com/projectmesa/mesa.git
-    $ cd mesa
-    # Então dê um `cd` para o diretório de exemplo.
-    $ cd examples/wolf_sheep
+    # Depois clone este repositório.
+    $ git clone https://github.com/ribas858/wolf_sheep_pandemic
+    # Então dê um `cd` para o diretório Wolf-Sheep Pandemic.
+    $ cd wolf_sheep_pandemic
     $ pip install -r requirements.txt
 ```
 
