@@ -22,7 +22,7 @@ O modelo é testado e demonstra vários conceitos e recursos do Mesa:
 
 ## Alterações no Código
 
-Na ``wolf_sheep/model.py`` o estágio de criaçao inicial dos lobos foi alterado para receber um determinado número de lobos doentes. Durante o ``for i in range(self.initial_wolves):``
+Na ``wolf_sheep/model.py`` o estágio de criaçao inicial dos lobos foi alterado para receber um determinado número de lobos doentes. Durante o "``for i in range(self.initial_wolves):``"
 
 ## Installation
 
