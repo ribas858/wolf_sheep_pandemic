@@ -10,7 +10,7 @@ Baseado no "Wolf Sheep Predation Model"
 
 ##### *Código final na branch* ***``main``***
 
-Com base em um modelo ecológico simples, composto por três tipos de agentes: lobos, ovelhas e capim. Os lobos e as ovelhas vagam aleatoriamente pela grade. Lobos e ovelhas gastam energia se movendo e a repõem comendo. As ovelhas comem grama e os lobos comem ovelhas caso as encontrem na mesma célula da grade. Se lobos e ovelhas tiverem energia suficiente, eles se reproduzem, criando um novo lobo ou ovelha (neste modelo simplificado, apenas um dos pais é necessário para a reprodução). A grama em cada célula cresce a uma taxa constante. Se algum lobo e ovelha ficar sem energia, eles morrem.
+Com base em um modelo ecológico simples, e composto por três tipos de agentes: lobos, ovelhas e capim. Os lobos e as ovelhas vagam aleatoriamente pela grade. Lobos e ovelhas gastam energia se movendo e a repõem comendo. As ovelhas comem grama e os lobos comem ovelhas caso as encontrem na mesma célula da grade. Se lobos e ovelhas tiverem energia suficiente, eles se reproduzem, criando um novo lobo ou ovelha (neste modelo simplificado, apenas um dos pais é necessário para a reprodução). A grama em cada célula cresce a uma taxa constante. Se algum lobo e ovelha ficar sem energia, eles morrem.
 
 Diante disso foi implantado uma doença contagiosa em um determinado número de Lobos (definido pelo usuário na interface). Enquanto os lobos vagam pela grade em busca de ovelhas, eles podem se deparar com algum lobo infectado, contraindo a doença caso não seja imune.
 
@@ -38,7 +38,7 @@ O modelo é testado, e demonstra vários conceitos e recursos do Mesa:
 
 ## Alterações no Código
 
-### ``wolf_sheep/model.py``
+### ``wolf_sheep_pandemic/model.py``
 
 #### **Novas variáveis:**
 **predator_init_doente:** Número de predadores doentes ao início da simulação.
@@ -53,7 +53,7 @@ No estágio de criação inicial dos lobos, o código foi alterado para receber 
 
 No ``self.datacollector`` foi alterado o idioma das labels, para Português-Brasil. E também foi inserido duas novas labels, "Lobos Doentes", e "Lobos Imunes", aliás a label "Lobos" (Wolves) passou para "Lobos Comuns", que são os lobos não imunes.
 
-### ``wolf_sheep/agents.py``
+### ``wolf_sheep_pandemic/agents.py``
 
 #### **Novos métodos:**
 **``def contamina():``** Contamina um lobo, se ele não for imune.
@@ -69,7 +69,7 @@ No momento do lobo se alimentar, é feita uma checagem ``if not self.doente:`` p
 
 Caso o lobo seja imune, é seguido uma probabilidade do gene da imunidade para a reprodução desse lobo. Se for atendido, o filho desse lobo também será imune.
 
-### ``wolf_sheep/server.py``
+### ``wolf_sheep_pandemic/server.py``
 
 #### **Novas imagens:**
 
@@ -131,12 +131,12 @@ Em seguida, abra seu navegador para [http://127.0.0.1:8521/](http://127.0.0.1:85
 
 ## Arquivos
 
-* ``wolf_sheep/random_walk.py``: Define o ``RandomWalker`` agente, que implementa o comportamento de se mover aleatoriamente em uma grade, uma célula por vez.Ambos os agentes Wolf e Sheep herdarão dele.
-* ``wolf_sheep/test_random_walk.py``: Define um modelo simples e uma visualização somente de texto destinada a garantir que a classe RandomWalk esteja funcionando conforme o esperado. Na verdade, isso não modela nada, mas serve como um teste de unidade ad-hoc. Para executá-lo, entre no diretório ``wolf_sheep`` e execute ``python test_random_walk.py``. Você verá uma série de grades ASCII, uma por etapa do modelo, com cada célula mostrando uma contagem do número de agentes nela.
-* ``wolf_sheep/agents.py``: Define as classes de agente Wolf, Sheep e GrassPatch.
-* ``wolf_sheep/scheduler.py``: Define uma variante personalizada no agendador RandomActivationByType, onde podemos definir filtros para a função `get_type_count`.
-* ``wolf_sheep/model.py``: Define o próprio modelo Wolf-Sheep.
-* ``wolf_sheep/server.py``: Configura o servidor de visualização interativa.
+* ``wolf_sheep_pandemic/random_walk.py``: Define o ``RandomWalker`` agente, que implementa o comportamento de se mover aleatoriamente em uma grade, uma célula por vez.Ambos os agentes Wolf e Sheep herdarão dele.
+* ``wolf_sheep_pandemic/test_random_walk.py``: Define um modelo simples e uma visualização somente de texto destinada a garantir que a classe RandomWalk esteja funcionando conforme o esperado. Na verdade, isso não modela nada, mas serve como um teste de unidade ad-hoc. Para executá-lo, entre no diretório ``wolf_sheep`` e execute ``python test_random_walk.py``. Você verá uma série de grades ASCII, uma por etapa do modelo, com cada célula mostrando uma contagem do número de agentes nela.
+* ``wolf_sheep_pandemic/agents.py``: Define as classes de agente Wolf, Sheep e GrassPatch.
+* ``wolf_sheep_pandemic/scheduler.py``: Define uma variante personalizada no agendador RandomActivationByType, onde podemos definir filtros para a função `get_type_count`.
+* ``wolf_sheep_pandemic/model.py``: Define o próprio modelo Wolf-Sheep.
+* ``wolf_sheep_pandemic/server.py``: Configura o servidor de visualização interativa.
 * ``run.py``: Inicia um servidor de visualização de modelo.
 
 ## Observações
