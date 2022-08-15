@@ -14,7 +14,7 @@ Com base em um modelo ecológico simples, e composto por três tipos de agentes:
 
 Diante disso foi implantado uma doença contagiosa em um determinado número de Lobos (definido pelo usuário na interface). Enquanto os lobos vagam pela grade em busca de ovelhas, eles podem se deparar com algum lobo infectado, contraindo a doença caso não seja imune.
 
-A partir do momento que um lobo está infectado ele não consegue mais se alimentar e nem se reproduzir, e eventualmente morrerá. Mas antes disso todos os lobos saudáveis que esse predador entrar em contato, ficarão doentes. Além disso, a infecção ocorre não apenas se o outro lobo estiver na mesma célula, mas também se ele estiver na área de uma célula de alcance, ou seja, em qualquer célula ao redor de onde se encontra o predador infectado.  Entretanto existe uma
+A partir do momento que um lobo está infectado ele não consegue mais se alimentar, e nem se reproduzir, e eventualmente morrerá. Mas antes disso todos os lobos saudáveis que esse predador entrar em contato, ficarão doentes. Além disso, a infecção ocorre não apenas se o outro lobo estiver na mesma célula, mas também se ele estiver na área de uma célula de alcance, ou seja, em qualquer célula ao redor de onde se encontra o predador infectado. Entretanto existe uma
 exceção, a probabilidade de existir predadores imunes, os mesmos não irão contrair a doença mesmo se entrarem em contato com um lobo doente.
 
 Os lobos imunes no momento de sua reprodução, tem chance de passar ou não o gene da imunidade para seus filhos, assim, se o lobo filho não herdar o gene, a probabilidade da população de lobos se extinguir completamente, será maior. As ovelhas, em contrapartida, não são afetadas pela doença e se comportam normalmente.
