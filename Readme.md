@@ -95,9 +95,11 @@ Adicionado um novo gráfico, com a variável:
 
 No momento em que o predador for contaminado, ele se manterá em um estado contagioso, ou seja, irá transmitir a doença para qualquer outro predador vulnerável. Caso um possível gene imune não predomine sobre a população, a espécie de predadores eventualmente será extinta.
 
-Diante disso a população da Presa irá crescer consideravelmente, pois seu predador não existe mais no ecossistema, contudo levando a uma falta de recursos, no caso, a grama. Quando a presa não puder mais se alimentar, a mesma será extinta.
+Diante disso a população da Presa irá crescer consideravelmente, pois seu predador não existe mais no ecossistema, assim levando a uma falta de recursos, no caso, a grama. Então quando a presa não puder mais se alimentar, a mesma será extinta.
+
+Quando o lobo e a ovelha não mais habitarem esse ecossistema, a grama eventualmente irá se regenerar.
 	
-Concluindo, uma doença infecciosa implantada sobre o predador leva à extinção dos três agentes do ecossistema em questão.
+Concluindo, uma doença infecciosa implantada sobre o predador leva à extinção de dois agentes do ecossistema, o lobo e a ovelha.
 
 ## Instalação
 
