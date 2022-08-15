@@ -10,7 +10,7 @@ Baseado no "Wolf Sheep Predation Model"
 
 ##### *Código final na branch* ***``main``***
 
-Com base em um modelo ecológico simples, e composto por três tipos de agentes: lobos, ovelhas e capim. Os lobos e as ovelhas vagam aleatoriamente pela grade. Lobos e ovelhas gastam energia se movendo e a repõem comendo. As ovelhas comem grama e os lobos comem ovelhas caso as encontrem na mesma célula da grade. Se lobos e ovelhas tiverem energia suficiente, eles se reproduzem, criando um novo lobo ou ovelha (neste modelo simplificado, apenas um dos pais é necessário para a reprodução). A grama em cada célula cresce a uma taxa constante. Se algum lobo e ovelha ficar sem energia, eles morrem.
+Com base em um modelo ecológico simples, e composto por três tipos de agentes: lobos, ovelhas e grama. Os lobos e as ovelhas vagam aleatoriamente pela grade. Lobos e ovelhas gastam energia se movendo, e a repõem comendo. As ovelhas comem grama e os lobos comem ovelhas, caso às encontrem na mesma célula da grade. Se lobos e ovelhas tiverem energia suficiente, eles se reproduzem, criando um novo lobo ou ovelha (neste modelo simplificado, apenas um dos pais é necessário para a reprodução). A grama em cada célula cresce a uma taxa constante. Se algum lobo e ovelha ficar sem energia, eles morrem.
 
 Diante disso foi implantado uma doença contagiosa em um determinado número de Lobos (definido pelo usuário na interface). Enquanto os lobos vagam pela grade em busca de ovelhas, eles podem se deparar com algum lobo infectado, contraindo a doença caso não seja imune.
 
