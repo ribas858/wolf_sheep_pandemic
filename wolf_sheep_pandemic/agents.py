@@ -1,4 +1,3 @@
-import this
 import mesa
 from wolf_sheep_pandemic.random_walk import RandomWalker
 

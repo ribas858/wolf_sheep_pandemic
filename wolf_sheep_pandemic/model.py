@@ -18,7 +18,7 @@ from wolf_sheep_pandemic.scheduler import RandomActivationByTypeFiltered
 from wolf_sheep_pandemic.agents import Sheep, Wolf, GrassPatch
 
 
-class WolfSheep(mesa.Model):
+class WolfSheepPandemic(mesa.Model):
     """
     Wolf-Sheep - Pandemic
     """

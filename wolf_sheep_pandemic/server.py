@@ -1,7 +1,7 @@
 import mesa
 
 from wolf_sheep_pandemic.agents import Wolf, Sheep, GrassPatch
-from wolf_sheep_pandemic.model import WolfSheep
+from wolf_sheep_pandemic.model import WolfSheepPandemic
 
 
 def wolf_sheep_portrayal(agent):
@@ -90,6 +90,6 @@ model_params = {
 }
 
 server = mesa.visualization.ModularServer(
-    WolfSheep, [canvas_element, chart_element, imunes], "Wolf Sheep Pandemic", model_params
+    WolfSheepPandemic, [canvas_element, chart_element, imunes], "Wolf Sheep Pandemic", model_params
 )
 server.port = 8521
